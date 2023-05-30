@@ -1,0 +1,25 @@
+// FONTS
+@mixin PPMori-Extralight($size: 14px){
+    font-family: 'PPMori-Extralight';
+    font-size: $size;
+}
+@mixin PPMori-ExtralightItalic($size: 14px){
+    font-family: 'PPMori-ExtralightItalic';
+    font-size: $size;
+}
+@mixin PPMori-Regular($size: 14px){
+    font-family: 'PPMori-Regular';
+    font-size: $size;
+}
+@mixin PPMori-RegularItalic($size: 14px){
+    font-family: 'PPMori-RegularItalic';
+    font-size: $size;
+}
+@mixin PPMori-SemiBold($size: 14px){
+    font-family: 'PPMori-SemiBold';
+    font-size: $size;
+}
+@mixin PPMori-SemiBoldItalic($size: 14px){
+    font-family: 'PPMori-SemiBoldItalic';
+    font-size: $size;
+}

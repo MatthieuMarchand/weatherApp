@@ -1,0 +1,157 @@
+@font-face {
+  font-family: "PPMori-Extralight";
+  src: url(/fonts/PP\ Mori/PPMori-Extralight.otf);
+}
+@font-face {
+  font-family: "PPMori-ExtralightItalic";
+  src: url(/fonts/PP\ Mori/PPMori-ExtralightItalic.otf);
+}
+@font-face {
+  font-family: "PPMori-Regular";
+  src: url(/fonts/PP\ Mori/PPMori-Regular.otf);
+}
+@font-face {
+  font-family: "PPMori-RegularItalic";
+  src: url(/fonts/PP\ Mori/PPMori-RegularItalic.otf);
+}
+@font-face {
+  font-family: "PPMori-SemiBold";
+  src: url(/fonts/PP\ Mori/PPMori-SemiBold.otf);
+}
+@font-face {
+  font-family: "PPMori-SemiBoldItalic";
+  src: url(/fonts/PP\ Mori/PPMori-SemiBoldItalic.otf);
+}
+#numbersDegree {
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+#quarterOfDays, #lineOfDays, nav {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+:root {
+  --swiper-theme-color: black;
+  --swiper-pagination-bullet-inactive-color: #963B1E;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+}
+
+.swiper {
+  background-color: #FF5A26;
+  height: 100vh;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  padding-top: 20px;
+}
+nav .location {
+  font-family: "PPMori-Regular";
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+nav .location span {
+  font-family: "PPMori-SemiBold";
+  font-size: 16px;
+}
+nav .description {
+  font-family: "PPMori-Extralight";
+  font-size: 12px;
+}
+
+#numbersDegree {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "PPMori-SemiBold";
+  font-size: 130px;
+  flex-grow: 1;
+}
+
+#lineOfDays {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: calc(100% - 10px);
+  overflow-x: scroll;
+}
+#lineOfDays .line {
+  height: 1px;
+  width: 200%;
+  background: #000;
+}
+#lineOfDays .dashes {
+  display: flex;
+  justify-content: space-around;
+  width: 200%;
+}
+#lineOfDays .dashes .dash {
+  position: relative;
+  width: 1px;
+  max-width: 1px;
+  height: 10px;
+  background: #000;
+  transform: translate(0, -50%);
+}
+#lineOfDays .dashes .dash img {
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -120%);
+}
+#lineOfDays .dashes .dash p {
+  position: absolute;
+  bottom: 0;
+  transform: translate(-50%, 100%);
+  text-align: center;
+  font-family: "PPMori-Extralight";
+  font-size: 12px;
+}
+#lineOfDays .dashes .dash:nth-of-type(1) {
+  width: 2px;
+  max-width: 2px;
+}
+#lineOfDays .dashes .dash:nth-of-type(1) p {
+  font-family: "PPMori-SemiBold";
+  font-size: 12px;
+}
+
+#lineOfDays::-webkit-scrollbar {
+  display: none;
+}
+
+#quarterOfDays {
+  position: relative;
+  width: calc(100% - 20px);
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  gap: 30px 10px;
+}
+#quarterOfDays p:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0, -100%);
+}
+#quarterOfDays p:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: calc(50% + 5px);
+  transform: translate(0, -100%);
+}
+#quarterOfDays div {
+  width: calc(50% - 5px);
+  height: 150px;
+  box-sizing: border-box;
+  border: solid 1px #963B1E;
+}
+
+* {
+  font-family: "PPMori-Extralight";
+  font-size: 14px;
+}/*# sourceMappingURL=style.css.map */

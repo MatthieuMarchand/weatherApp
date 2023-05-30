@@ -1,0 +1,101 @@
+nav {
+    padding-top: 20px;
+    @extend %margin;
+    .location {
+        @include PPMori-Regular(16px);
+        span {
+            @include PPMori-SemiBold(16px);
+        }
+        margin-bottom: 3px;
+    }
+    .description {
+        @include PPMori-Extralight(12px);
+    }
+}
+
+#numbersDegree {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @extend %text-shadow;
+    @include PPMori-SemiBold(130px);
+
+    flex-grow: 1;
+}
+
+#lineOfDays {
+    @extend %margin;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: calc(100% - 10px);
+    overflow-x: scroll;
+    .line {
+        height: 1px;
+        width: 200%;
+        background: $black;
+    }
+    .dashes {
+        display: flex;
+        justify-content: space-around;
+        width: 200%;
+        .dash {
+            position: relative;
+            width: 1px;
+            max-width: 1px;
+            height: 10px;
+            background: $black;
+            transform: translate(0, -50%);
+            img {
+                position: absolute;
+                top: 0;
+                transform: translate(-50%, -120%);
+            }
+            p {
+                position: absolute;
+                bottom: 0;
+                transform: translate(-50%, 100%);
+                text-align: center;
+                @include PPMori-Extralight(12px);
+            }
+        }
+        .dash:nth-of-type(1) {
+            width: 2px;
+            max-width: 2px;
+            p {
+                @include PPMori-SemiBold(12px);
+            }
+        }
+    }
+}
+#lineOfDays::-webkit-scrollbar {
+    display: none;
+}
+
+#quarterOfDays {
+    position: relative;
+    width: calc(100% - 20px);
+    @extend %margin;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    gap: 30px 10px;
+    p:nth-child(1) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(0, -100%);
+    }
+    p:nth-child(2) {
+        position: absolute;
+        top: 0;
+        left: calc(50% + 5px);
+        transform: translate(0, -100%);
+    }
+    div {
+        width: calc(50% - 5px);
+        height: 150px;
+        box-sizing: border-box;
+        border: solid 1px $orangeDark;
+    }
+}

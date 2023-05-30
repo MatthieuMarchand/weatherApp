@@ -1,0 +1,38 @@
+// ! colors
+$black: #000;
+$blackLight: #1E1E1E;
+$white: #fff;
+$orangeLight: #FF5A26;
+$orangeDark: #963B1E;
+$blueNeigeLight: #A6C1F3;
+$blueNeigeDark: #0054F1; // avant #003CAD
+$bluelight: #2962CD;
+$blueDark: #163775;
+$greyLight: #D9D9D9;
+$greyDark: #939393;
+
+// ! fonts
+@font-face {
+    font-family: 'PPMori-Extralight';
+    src: url(/fonts/PP\ Mori/PPMori-Extralight.otf);
+}
+@font-face {
+    font-family: 'PPMori-ExtralightItalic';
+    src: url(/fonts/PP\ Mori/PPMori-ExtralightItalic.otf);
+}
+@font-face {
+    font-family: 'PPMori-Regular';
+    src: url(/fonts/PP\ Mori/PPMori-Regular.otf);
+}
+@font-face {
+    font-family: 'PPMori-RegularItalic';
+    src: url(/fonts/PP\ Mori/PPMori-RegularItalic.otf);
+}
+@font-face {
+    font-family: 'PPMori-SemiBold';
+    src: url(/fonts/PP\ Mori/PPMori-SemiBold.otf);
+}
+@font-face {
+    font-family: 'PPMori-SemiBoldItalic';
+    src: url(/fonts/PP\ Mori/PPMori-SemiBoldItalic.otf);
+}

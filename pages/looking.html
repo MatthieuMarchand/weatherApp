@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    fetch('/components/html/head.html')
+        .then(response => response.text())
+        .then(data => {
+        const head = document.querySelector('head');
+        head.insertAdjacentHTML('beforeend', data);
+        });
+    </script>
+</head>
+<body>
+    <div class="swiper">
+        <div class="swiper-wrapper"> <!-- contient les slides -->
+            <div class="swiper-slide">
+                <nav>
+                    <p class="location"><span>Nice</span>, France</p>
+                    <p class="description">Ensoleillé</p>
+                </nav>
+                <p id="numbersDegree">23°</p>
+                <div id="lineOfDays">
+                    <div class="line"></div>
+                    <div class="dashes">
+                        <div class="dash">
+                            <img src="/images/icons/icon-1.svg">
+                            <p>
+                                mar
+                                <br>
+                                27/05
+                            </p>
+                        </div>
+                        <div class="dash">
+                            <img src="/images/icons/icon-2.svg">
+                            <p>
+                                mar
+                                <br>
+                                27/05
+                            </p>
+                        </div>
+                        <div class="dash">
+                            <img src="/images/icons/icon-3.svg">
+                            <p>
+                                mar
+                                <br>
+                                27/05
+                            </p>
+                        </div>
+                        <div class="dash">
+                            <img src="/images/icons/icon-4.svg">
+                            <p>
+                                mar
+                                <br>
+                                27/05
+                            </p>
+                        </div>
+                        <div class="dash">
+                            <img src="/images/icons/icon-5.svg">
+                            <p>
+                                mar
+                                <br>
+                                27/05
+                            </p>
+                        </div>
+                        <div class="dash">
+                            <img src="/images/icons/icon-6.svg">
+                            <p>
+                                mar
+                                <br>
+                                27/05
+                            </p>
+                        </div>
+                        <div class="dash">
+                            <img src="/images/icons/icon-7.svg">
+                            <p>
+                                mar
+                                <br>
+                                27/05
+                            </p>
+                        </div>
+                        <div class="dash">
+                            <img src="/images/icons/icon-8.svg">
+                            <p>
+                                mar
+                                <br>
+                                27/05
+                            </p>
+                        </div>
+                        <div class="dash">
+                            <img src="/images/icons/icon-1.svg">
+                            <p>
+                                mar
+                                <br>
+                                27/05
+                            </p>
+                        </div>
+                        <div class="dash">
+                            <img src="/images/icons/icon-2.svg">
+                            <p>
+                                mar
+                                <br>
+                                27/05
+                            </p>
+                        </div>
+                        <div class="dash">
+                            <img src="/images/icons/icon-3.svg">
+                            <p>
+                                mar
+                                <br>
+                                27/05
+                            </p>
+                        </div>
+                        <div class="dash">
+                            <img src="/images/icons/icon-4.svg">
+                            <p>
+                                mar
+                                <br>
+                                27/05
+                            </p>
+                        </div>
+                        <div class="dash">
+                            <img src="/images/icons/icon-5.svg">
+                            <p>
+                                mar
+                                <br>
+                                27/05
+                            </p>
+                        </div>
+                        <div class="dash">
+                            <img src="/images/icons/icon-6.svg">
+                            <p>
+                                mar
+                                <br>
+                                27/05
+                            </p>
+                        </div>
+                        <div class="dash">
+                            <img src="/images/icons/icon-7.svg">
+                            <p>
+                                mar
+                                <br>
+                                27/05
+                            </p>
+                        </div>
+                        <div class="dash">
+                            <img src="/images/icons/icon-8.svg">
+                            <p>
+                                mar
+                                <br>
+                                27/05
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="quarterOfDays">
+                    <p>AM</p>
+                    <p>PM</p>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/swiperSetting.js"></script>
+</body>
+</html>

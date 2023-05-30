@@ -1,0 +1,8 @@
+// ! import scss pages
+@import 'swiper';
+@import 'index/index';
+@import 'looking/looking';
+
+* {
+    @include PPMori-Extralight;
+}

@@ -1,0 +1,15 @@
+:root {
+    --swiper-theme-color: black;
+    --swiper-pagination-bullet-inactive-color: #963B1E;
+    --swiper-pagination-bullet-inactive-opacity: 1;
+}
+
+.swiper {
+    background-color: $orangeLight; // ! change
+    height: 100vh;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+}
