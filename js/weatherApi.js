@@ -1,39 +1,44 @@
 // const weatherApiKey = 'c6e3ec46ee4e0fcd09e9294be71fd74778354d8cac0257c0dc8525d943dfc117'; // token 1
-const weatherApiKey = '5aaaade0c23bf25892a797a9093b8e34a4497e1abca5864714f449a3d9ed726c'; // token 2
+// const weatherApiKey = '5aaaade0c23bf25892a797a9093b8e34a4497e1abca5864714f449a3d9ed726c'; // token 2
+const weatherApiKey = '0b1174d763d0a5e1a4b3bc54f881035222eaba7869180cc0fe7a58c15fd51da1'; // token 3
 const weekDays = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
-const sectionDayDivs = document.querySelector("#dayDivs"); // ? A changer
-// const titleCityName = document.querySelector("#titleCityName");
 
-function sendCityName() {
-    const urlCityName = `https://api.meteo-concept.com/api/location/cities?token=${weatherApiKey}&search=${currentCity}`;
-    fetch(urlCityName)
-        .then(response => response.json())
-        .then(data => {
-            const cityInsee = data.cities[0].insee;
-            const urlCityDaily = `https://api.meteo-concept.com/api/forecast/daily?token=${weatherApiKey}&insee=${cityInsee}`;
-            return fetch(urlCityDaily);
-        })
-        .then(response => response.json())
-        .then(data => {
-            // console.log('daily:', data);
+// function sendCityName() {
+//     const urlCityName = `https://api.meteo-concept.com/api/location/cities?token=${weatherApiKey}&search=${currentCity}`;
+//     fetch(urlCityName)
+//         .then(response => response.json())
+//         .then(data => {
+//             const cityInsee = data.cities[0].insee;
+//             const urlCityDaily = `https://api.meteo-concept.com/api/forecast/daily?token=${weatherApiKey}&insee=${cityInsee}`;
+//             return fetch(urlCityDaily);
+//         })
+//         .then(response => response.json())
+//         .then(data => {
+//             // console.log('daily:', data);
 
-            const weatherNumber = data.forecast[0].weather;
-            document.querySelector('.description').textContent = weatherValue(weatherNumber);
+//             // insert
+//             document.querySelector('.description').textContent = weatherValue(data.forecast[0].weather);
 
-            const cityInsee = data.city.insee;
-            const urlCityPeriods = `https://api.meteo-concept.com/api/forecast/daily/periods?token=${weatherApiKey}&insee=${cityInsee}`;
-            return fetch(urlCityPeriods);
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('periods:', data);
+//             const cityInsee = data.city.insee;
+//             const urlCityPeriods = `https://api.meteo-concept.com/api/forecast/daily/periods?token=${weatherApiKey}&insee=${cityInsee}`;
+//             return fetch(urlCityPeriods);
+//         })
+//         .then(response => response.json())
+//         .then(data => {
+//             // console.log('periods:', data);
 
-            document.querySelector('.location span').textContent = data.city.name;
-            console.log(data.forecast[0][getCurrentTime()].temp2m);
-            document.getElementById("numbersDegree").innerHTML = data.forecast[0][getCurrentTime()].temp2m + "°";
-        })
-        .catch(error => console.error(error));
-}
+//             //insert
+//             document.querySelector('.location span').textContent = data.city.name;
+//             document.getElementById("numbersDegree").innerHTML = data.forecast[0][getCurrentTime()].temp2m + "°";
+//             const divs = document.getElementById('quarterOfDays').getElementsByClassName('quarterOfDay');
+//             for (let i = 0; i < 4; i++) {
+//                 divs[i].querySelector(".description").innerHTML = weatherValue(data.forecast[0][i].weather);
+//                 divs[i].querySelector(".probaWind").innerHTML = data.forecast[0][i].wind10m + " km/h";
+//                 divs[i].querySelector(".probaRain").innerHTML = data.forecast[0][i].probarain + "%";
+//             }
+//         })
+//         .catch(error => console.error(error));
+// }
 
 function getCurrentTime() {
     const currentHour = new Date().getHours();
@@ -65,37 +70,6 @@ function getCurrentTime() {
 // console.log('ce soir il fera ' + data.forecast[0][3].temp2m + ' °C');
 
 
-
-// const cityInsee = '75056';
-// console.log(cityInsee);
-
-// const today = new Date();
-// const date = new Date(today); // "date": jour que je veux connaitre
-// date.setDate(date.getDate() + 0); // "+1" pour définir un jour après
-
-// const year = date.getFullYear();
-// const month = String(date.getMonth() + 1).padStart(2, '0');
-// const day = String(date.getDate()).padStart(2, '0');
-
-// const fullDate = `${year}-${month}-${day}`;
-
-// // const urlWithDate = `https://api.meteo-concept.com/api/forecast/city/day?token=${weatherApiKey}&insee=${cityInsee}&date=${fullDate}`;
-
-// const urlCityInsee = `https://api.meteo-concept.com/api/forecast/daily?token=${weatherApiKey}&insee=${cityInsee}`;
-
-// fetch(urlCityInsee)
-//     .then(response => response.json())
-//     .then(data => {
-//         console.log(data);
-//         // const weather = data.forecast.weather;
-//         // console.log(weather);
-//     })
-//     .catch(error => {
-//         console.error(error);
-//     });
-
-
-
 // ancien code :
             // sectionDayDivs.innerHTML = ``;
             // titleCityName.innerHTML = `${data.city.name}`;
@@ -114,3 +88,37 @@ function getCurrentTime() {
             //     );
             // }).join('');
             // sectionDayDivs.innerHTML += forecastHtml;
+
+let dataCityDaily;
+let dataCityPeriods;
+let dataSearchCity;
+
+const urlSearchCity = `https://api.meteo-concept.com/api/location/cities?token=${weatherApiKey}&search=${currentCity}`;
+fetch(urlSearchCity)
+    .then(response => response.json())
+    .then(data => {
+        dataSearchCity = data;
+
+        let cityInsee = dataSearchCity.cities[0].insee;
+
+        const urlCityDaily = `https://api.meteo-concept.com/api/forecast/daily?token=${weatherApiKey}&insee=${cityInsee}`;
+        const urlCityPeriods = `https://api.meteo-concept.com/api/forecast/daily/periods?token=${weatherApiKey}&insee=${cityInsee}`;
+
+        // Créer un tableau de promesses pour les deux appels fetch
+        const promises = [
+            fetch(urlCityDaily).then(response => response.json()),
+            fetch(urlCityPeriods).then(response => response.json())
+        ];
+
+        // Attendre que les deux promesses soient résolues
+        return Promise.all(promises);
+    })
+    .then(([cityDailyData, cityPeriodsData]) => {
+        // Récupérer les données des deux promesses dans des variables distinctes
+        dataCityDaily = cityDailyData;
+        dataCityPeriods = cityPeriodsData;
+
+        // Appeler votre fonction avec les données en tant que paramètres
+        insertContent(dataCityDaily, dataCityPeriods, dataSearchCity);
+    })
+    .catch(error => console.error(error));

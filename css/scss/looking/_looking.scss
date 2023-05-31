@@ -80,19 +80,19 @@ nav {
     flex-wrap: wrap;
     align-content: space-between;
     gap: 30px 10px;
-    p:nth-child(1) {
+    .am {
         position: absolute;
         top: 0;
         left: 0;
         transform: translate(0, -100%);
     }
-    p:nth-child(2) {
+    .pm {
         position: absolute;
         top: 0;
         left: calc(50% + 5px);
         transform: translate(0, -100%);
     }
-    div {
+    .quarterOfDay {
         width: calc(50% - 5px);
         height: 150px;
         box-sizing: border-box;

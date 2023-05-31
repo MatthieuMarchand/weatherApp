@@ -17,11 +17,13 @@
         <div class="swiper-wrapper"> <!-- contient les slides -->
             <div class="swiper-slide">
                 <nav>
-                    <p class="location"><span>Nice</span>, France</p>
-                    <p class="description">Ensoleillé</p>
+                    <p class="location"><span></span>, France</p>
+                    <p class="description"></p>
                 </nav>
-                <p id="numbersDegree">23°</p>
-                <div id="lineOfDays">
+                <p id="numbersDegree">error</p>
+
+                <!-- ligne temps à venir -->
+                <!-- <div id="lineOfDays">
                     <div class="line"></div>
                     <div class="dashes">
                         <div class="dash">
@@ -153,18 +155,63 @@
                             </p>
                         </div>
                     </div>
-                </div>
+                </div> -->
+
+                <!-- quatre carré -->
                 <div id="quarterOfDays">
-                    <p>AM</p>
-                    <p>PM</p>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <p class="am">AM</p>
+                    <p class="pm">PM</p>
+                    <div class="quarterOfDay">
+                        <p>00H - 06H</p>
+                        <p class="description"></p>
+                        <div>
+                            <img src="/images/icons/icon-10.svg" alt="probability of rain">
+                            <p class="probaRain"></p>
+                        </div>
+                        <div>
+                            <img src="/images/icons/icon-9.svg" alt="Medium wind">
+                            <p class="probaWind"></p>
+                        </div>
+                    </div>
+                    <div class="quarterOfDay">
+                        <p>12H - 18H</p>
+                        <p class="description"></p>
+                        <div>
+                            <img src="/images/icons/icon-10.svg" alt="probability of rain">
+                            <p class="probaRain"></p>
+                        </div>
+                        <div>
+                            <img src="/images/icons/icon-9.svg" alt="Medium wind">
+                            <p class="probaWind"></p>
+                        </div>
+                    </div>
+                    <div class="quarterOfDay">
+                        <p>06H - 12H</p>
+                        <p class="description"></p>
+                        <div>
+                            <img src="/images/icons/icon-10.svg" alt="probability of rain">
+                            <p class="probaRain"></p>
+                        </div>
+                        <div>
+                            <img src="/images/icons/icon-9.svg" alt="Medium wind">
+                            <p class="probaWind"></p>
+                        </div>
+                    </div>
+                    <div class="quarterOfDay">
+                        <p>18H - 06H</p>
+                        <p class="description"></p>
+                        <div>
+                            <img src="/images/icons/icon-10.svg" alt="probability of rain">
+                            <p class="probaRain"></p>
+                        </div>
+                        <div>
+                            <img src="/images/icons/icon-9.svg" alt="Medium wind">
+                            <p class="probaWind"></p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
+            <!-- <div class="swiper-slide"></div> -->
         </div>
         <div class="swiper-pagination"></div>
     </div>
@@ -172,6 +219,6 @@
     <script src="/js/swiperSetting.js"></script>
     <script src="/js/weatherIcons.js"></script>
     <script src="/js/weatherApi.js"></script>
-    <script src="/js/insertData.js"></script>
+    <script src="/js/insertContent.js"></script>
 </body>
 </html>

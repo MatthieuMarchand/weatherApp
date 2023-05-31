@@ -1,4 +1,4 @@
-let currentCity = null;
+let currentCity;
 
 function handleFormSubmit(event) {
     event.preventDefault(); // Empêche le rechargement de la page par défaut

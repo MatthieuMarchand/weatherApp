@@ -132,19 +132,19 @@ nav .description {
   align-content: space-between;
   gap: 30px 10px;
 }
-#quarterOfDays p:nth-child(1) {
+#quarterOfDays .am {
   position: absolute;
   top: 0;
   left: 0;
   transform: translate(0, -100%);
 }
-#quarterOfDays p:nth-child(2) {
+#quarterOfDays .pm {
   position: absolute;
   top: 0;
   left: calc(50% + 5px);
   transform: translate(0, -100%);
 }
-#quarterOfDays div {
+#quarterOfDays .quarterOfDay {
   width: calc(50% - 5px);
   height: 150px;
   box-sizing: border-box;
