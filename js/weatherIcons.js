@@ -1,19 +1,18 @@
 
-let elementRecherche = null;
-
-for (let i = 0; i < tableau.length; i++) {
-  if (tableau[i].nom === "case3") {
-    elementRecherche = tableau[i];
-    break; // Sortir de la boucle si l'élément est trouvé
+function weatherValue(weatherNumber) {
+  for (let i = 0; i < weatherIcons.length; i++) {
+    if (weatherIcons[i].number === weatherNumber) {
+      return (weatherIcons[i].value);
+    }
   }
 }
-
-if (elementRecherche !== null) {
-  console.log("Élément trouvé :", elementRecherche);
-} else {
-  console.log("Élément non trouvé");
+function weatherSrc(weatherNumber) {
+  for (let i = 0; i < weatherIcons.length; i++) {
+    if (weatherIcons[i].number === weatherNumber) {
+      return (weatherIcons[i].src);
+    }
+  }
 }
-
 
 let weatherIcons = [
   {
