@@ -68,6 +68,5 @@ function insertContent(dataCityDaily, dataCityPeriods, dataSearchCity) {
         </div>
     </div>
     `}
+    swiperInit();
 }
-
-// sendCityName();

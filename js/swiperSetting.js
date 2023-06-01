@@ -1,12 +1,14 @@
-const swiper = new Swiper('.swiper', {
-    keyboard: {
-        enabled: true,
-        onlyInViewport: false,
-    },
+function swiperInit() {
+    const swiper = new Swiper('.swiper', {
+        keyboard: {
+            enabled: true,
+            onlyInViewport: false,
+        },
 
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        dynamicBullets: true,
-    },
-})
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true,
+        },
+    })
+}
