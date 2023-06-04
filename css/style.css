@@ -22,7 +22,7 @@
   font-family: "PPMori-SemiBoldItalic";
   src: url(/fonts/PP\ Mori/PPMori-SemiBoldItalic.otf);
 }
-#numbersDegree {
+#numbersDegree, #mainIndex h1 {
   text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
 }
 
@@ -45,6 +45,32 @@
 .swiper-slide {
   display: flex;
   flex-direction: column;
+}
+
+#mainIndex {
+  max-width: 500px;
+  padding: 10px;
+  padding-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#mainIndex h1 {
+  font-family: "PPMori-SemiBold";
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+#mainIndex input {
+  width: calc(100% - 10px);
+  height: 38px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+  background: transparent;
+  border: solid 1px #000;
+  font-family: "PPMori-Regular";
+  font-size: 16px;
 }
 
 nav {
