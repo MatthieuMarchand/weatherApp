@@ -13,15 +13,35 @@
     </script>
 </head>
 <body>
+
+    <script type="text/template" id="list-template">
+        {{#list}}
+            <div class="swiper-slide">
+                <main id="mainLooking">
+                    <nav>
+                        <p class="location"><span>{{name}}</span>, France</p>
+                        <p class="description">{{description}}</p>
+                    </nav>
+                    <p id="numbersDegree">{{degree}}°</p>
+                </main>
+            </div>
+        {{/list}}
+    </script>
+
     <div class="swiper">
         <div class="swiper-wrapper"></div>
         <div class="swiper-pagination"></div>
     </div>
+
+    <!-- swiper and mustache -->
+    <script src="/node_modules/mustache/mustache.js"></script>
     <script src="/js/swiper-bundle.min.js"></script>
     <script src="/js/swiperSetting.js"></script>
-    <script src="/js/retrieveDate.js"></script>
+
+    <!-- fichier js -->
+    <!-- <script src="/js/retrieveDate.js"></script>
     <script src="/js/weatherIcons.js"></script>
-    <script src="/js/weatherApi.js"></script>
+    <script src="/js/weatherApi.js"></script> -->
     <script src="/js/insertContent.js"></script>
 </body>
 </html>

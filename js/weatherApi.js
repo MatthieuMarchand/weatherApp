@@ -1,6 +1,6 @@
 // const weatherApiKey = 'c6e3ec46ee4e0fcd09e9294be71fd74778354d8cac0257c0dc8525d943dfc117'; // token 1
-const weatherApiKey = '5aaaade0c23bf25892a797a9093b8e34a4497e1abca5864714f449a3d9ed726c'; // token 2
-// const weatherApiKey = '0b1174d763d0a5e1a4b3bc54f881035222eaba7869180cc0fe7a58c15fd51da1'; // token 3
+// const weatherApiKey = '5aaaade0c23bf25892a797a9093b8e34a4497e1abca5864714f449a3d9ed726c'; // token 2
+const weatherApiKey = '0b1174d763d0a5e1a4b3bc54f881035222eaba7869180cc0fe7a58c15fd51da1'; // token 3
 
 function getCurrentTime() {
     const currentHour = new Date().getHours();
